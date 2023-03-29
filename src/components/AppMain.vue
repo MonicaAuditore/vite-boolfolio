@@ -36,7 +36,7 @@ export default {
               {{ post.category ? post.category.name : "-" }}
             </h4>
             <div>
-              <img src="#" />
+              <img :src="posts.img" alt="" />
             </div>
             <p>
               {{ post.content }}
