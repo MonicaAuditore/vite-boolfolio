@@ -32,9 +32,24 @@ export default {
             <h2>
               {{ post.title }}
             </h2>
+            <h4>
+              {{ post.category ? post.category.name : "-" }}
+            </h4>
+            <div>
+              <img src="#" />
+            </div>
             <p>
               {{ post.content }}
             </p>
+
+            <div v-if="post.technologies.length > 0">
+              <h3>Technologies:</h3>
+              <ul>
+                <li v-for="technology in post.technologies">
+                  {{ technology.name }}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
