@@ -6,13 +6,33 @@ export default {
   data() {
     return {
       posts: [],
+      currentPage: 1,
+      lastPage: 1,
     };
   },
   created() {
-    axios.get("http://127.0.0.1:8000/api/posts").then((response) => {
-      console.log(response.data);
-      this.posts = response.data.posts.data;
-    });
+    this.getPosts();
+  },
+  methods: {
+    changePage(page) {
+      this.currentPage = page;
+      this.getPosts();
+    },
+    getPosts() {
+      axios
+        .get("http://127.0.0.1:8000/api/posts", {
+          params: {
+            page: this.currentPage,
+          },
+        })
+        .then((response) => {
+          console.log(response.data);
+          // Stampo le info dei post
+          this.posts = response.data.posts.data;
+          // Stampo l'ultima pagina
+          this.lastPage = response.data.posts.last_page;
+        });
+    },
   },
 };
 </script>
@@ -23,6 +43,14 @@ export default {
       <div class="row mb-4">
         <div class="col">
           <h1>Boolfolio front end</h1>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col">
+          <div v-for="i in lastPage" style="display: inline-block">
+            <button @click="changePage(i)">Pagina {{ i }}</button>
+          </div>
         </div>
       </div>
 
