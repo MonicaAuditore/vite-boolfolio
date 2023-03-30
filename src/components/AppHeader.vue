@@ -20,7 +20,6 @@ export default {
         <div class="col">
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
               <button
                 class="navbar-toggler"
                 type="button"
@@ -33,7 +32,7 @@ export default {
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav d-flex w-100 justify-content-center">
                   <li class="nav-item">
                     <router-link :to="{ name: 'home' }" class="nav-link">
                       Home
@@ -42,6 +41,11 @@ export default {
                   <li class="nav-item">
                     <router-link :to="{ name: 'about-us' }" class="nav-link">
                       Chi siamo
+                    </router-link>
+                  </li>
+                  <li class="nav-item">
+                    <router-link :to="{ name: 'blog' }" class="nav-link">
+                      Blog
                     </router-link>
                   </li>
                 </ul>
