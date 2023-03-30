@@ -39,7 +39,7 @@ export default {
               {{ post.formatted_created_at }}
             </h4>
             <div>
-              <img :src="posts.img" alt="" />
+              <img :src="post.img" alt="" />
             </div>
             <p>
               {{ post.content }}
