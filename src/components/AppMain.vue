@@ -49,8 +49,8 @@ export default {
             <div v-if="post.technologies.length > 0">
               <h3>Technologies:</h3>
               <ul>
-                <li v-for="technology in post.technologies">
-                  {{ technology.name }}
+                <li v-for="technologies in post.technologies">
+                  {{ technologies.name }}
                 </li>
               </ul>
             </div>
