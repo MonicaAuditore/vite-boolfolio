@@ -29,7 +29,7 @@ export default {
           console.log(response.data);
           // Stampo le info dei post
           this.posts = response.data.posts.data;
-          // Stampo l'ultima pagina
+          // Stampo l'ultima pagina per creare i link alle altre pagine
           this.lastPage = response.data.posts.last_page;
         });
     },
