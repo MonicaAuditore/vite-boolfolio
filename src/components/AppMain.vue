@@ -35,6 +35,9 @@ export default {
             <h4>
               {{ post.category ? post.category.name : "-" }}
             </h4>
+            <h4>
+              {{ post.formatted_created_at }}
+            </h4>
             <div>
               <img :src="posts.img" alt="" />
             </div>
