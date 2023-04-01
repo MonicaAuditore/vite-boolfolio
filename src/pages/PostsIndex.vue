@@ -46,9 +46,16 @@ export default {
   <div class="container">
     <div class="row mb-4">
       <div class="col">
-        <div v-for="i in lastPage" style="display: inline-block">
-          <button @click="changePage(i)">Pagina {{ i }}</button>
-        </div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item" v-for="i in lastPage">
+              <button class="page-link" @click="changePage(i)">
+                {{ i }}
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <div v-for="i in lastPage" style="display: inline-block"></div>
       </div>
     </div>
 
