@@ -56,12 +56,33 @@ export default {
           />
           <div class="card-body">
             <h5 class="card-title">{{ post.title }}</h5>
-            <h6></h6>
+            <h6>
+              <i class="fa-solid fa-tag"></i>
+              {{ post.category ? post.category.name : " Nessuna categoria" }}
+            </h6>
             <p class="card-text">
               {{ post.content }}
             </p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
+
+          <div class="card-footer text-body-secondary">
+            <span class="badge rounded-pill text-bg-primary">
+              technologies
+            </span>
+          </div>
+        </div>
+
+        <div
+          class="card-footer text-body-secondary"
+          v-if="post.technologies.length > 0"
+        >
+          <span
+            class="badge rounded-pill text-bg-primary"
+            v-for="technologies in post.technology"
+          >
+            {{ technology.name }}
+          </span>
         </div>
 
         <!-- <div class="mt-4 mb-4">
