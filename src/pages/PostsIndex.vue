@@ -84,34 +84,6 @@ export default {
             {{ technology.name }}
           </span>
         </div>
-
-        <!-- <div class="mt-4 mb-4">
-          <h2>
-            {{ post.title }}
-          </h2>
-          <h4>
-            {{ post.category ? post.category.name : "-" }}
-          </h4>
-          <h4>
-            Creato:
-            {{ post.formatted_created_at }}
-          </h4>
-          <div>
-            <img :src="post.img" style="width: 200px" alt="" />
-          </div>
-          <p>
-            {{ post.content }}
-          </p>
-
-          <div v-if="post.technologies.length > 0">
-            <h3>Technologies:</h3>
-            <ul>
-              <li v-for="technologies in post.technologies">
-                {{ technologies.name }}
-              </li>
-            </ul>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>
