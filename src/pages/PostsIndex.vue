@@ -44,22 +44,7 @@ export default {
 
 <template>
   <div class="container">
-    <div class="row mb-4">
-      <div class="col">
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item" v-for="i in lastPage">
-              <button class="page-link" @click="changePage(i)">
-                {{ i }}
-              </button>
-            </li>
-          </ul>
-        </nav>
-        <div v-for="i in lastPage" style="display: inline-block"></div>
-      </div>
-    </div>
-
-    <div class="row mb-4 g-3">
+    <div class="row mb-4 mt-4 g-3">
       <div v-for="post in posts" class="col-12 col-sm-4 col-md-3">
         <PostCard :post="(post = post)" />
 
@@ -74,6 +59,23 @@ export default {
             {{ technology.name }}
           </span>
         </div>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col">
+        <nav class="d-flex justify-content-center mt-4">
+          <ul class="pagination">
+            <li class="page-item" v-for="i in lastPage">
+              <button
+                class="page-link align-self-end"
+                :class="{ active: currentPage == i }"
+                @click="changePage(i)"
+              >
+                {{ i }}
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </div>

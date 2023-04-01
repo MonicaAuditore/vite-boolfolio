@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <main>
+  <footer>
     <div class="container">
       <div class="row mb-4">
         <div class="col">
@@ -16,7 +16,7 @@ export default {
         </div>
       </div>
     </div>
-  </main>
+  </footer>
 </template>
 
 <style scoped></style>

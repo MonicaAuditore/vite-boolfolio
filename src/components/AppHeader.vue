@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-  <main>
+  <header>
     <div class="container">
       <div class="row mb-4">
         <div class="col">
@@ -63,7 +63,7 @@ export default {
         </div>
       </div>
     </div>
-  </main>
+  </header>
 </template>
 
 <style scoped></style>
