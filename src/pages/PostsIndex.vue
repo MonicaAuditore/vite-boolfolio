@@ -44,7 +44,7 @@ export default {
 
 <template>
   <div class="container">
-    <div class="row mb-4 mt-4 g-3">
+    <div class="row mb-4 g-3">
       <div v-for="post in posts" class="col-12 col-sm-4 col-md-3">
         <PostCard :post="(post = post)" />
 

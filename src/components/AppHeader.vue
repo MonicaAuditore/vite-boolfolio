@@ -25,13 +25,13 @@ export default {
 <template>
   <header>
     <div class="container">
-      <div class="row mb-4">
+      <div class="row mb-4 mt-4">
         <div class="col">
           <h1 class="text-center">Boolfolio front end</h1>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row mb-5">
         <div class="col">
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
