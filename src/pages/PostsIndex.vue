@@ -46,9 +46,9 @@ export default {
       </div>
     </div>
 
-    <div class="row mb-4">
-      <div v-for="post in posts" class="col">
-        <div class="card" style="width: 18rem">
+    <div class="row mb-4 g-3">
+      <div v-for="post in posts" class="col-12 col-sm-4 col-md-3">
+        <div class="card h-100" style="width: 18rem">
           <img
             :src="post.img ?? 'https://placehold.co/600x400'"
             class="card-img-top"
