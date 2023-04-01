@@ -2,7 +2,22 @@
 export default {
   name: "AppHeader",
   data() {
-    return {};
+    return {
+      menuItems: [
+        {
+          routeName: "home",
+          label: "Home",
+        },
+        {
+          routeName: "about-us",
+          label: "Chi siamo",
+        },
+        {
+          routeName: "blog",
+          label: "blog",
+        },
+      ],
+    };
   },
 };
 </script>
@@ -33,19 +48,12 @@ export default {
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav d-flex w-100 justify-content-center">
-                  <li class="nav-item">
-                    <router-link :to="{ name: 'home' }" class="nav-link">
-                      Home
-                    </router-link>
-                  </li>
-                  <li class="nav-item">
-                    <router-link :to="{ name: 'about-us' }" class="nav-link">
-                      Chi siamo
-                    </router-link>
-                  </li>
-                  <li class="nav-item">
-                    <router-link :to="{ name: 'blog' }" class="nav-link">
-                      Blog
+                  <li class="nav-item" v-for="menuItem in menuItems">
+                    <router-link
+                      :to="{ name: menuItem.routeName.name }"
+                      class="nav-link"
+                    >
+                      {{ menuItem.label }}
                     </router-link>
                   </li>
                 </ul>

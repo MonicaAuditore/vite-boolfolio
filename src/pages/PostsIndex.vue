@@ -48,7 +48,23 @@ export default {
 
     <div class="row mb-4">
       <div v-for="post in posts" class="col">
-        <div class="mt-4 mb-4">
+        <div class="card" style="width: 18rem">
+          <img
+            :src="post.img ?? 'https://placehold.co/600x400'"
+            class="card-img-top"
+            :alt="post.title"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <h6></h6>
+            <p class="card-text">
+              {{ post.content }}
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <!-- <div class="mt-4 mb-4">
           <h2>
             {{ post.title }}
           </h2>
@@ -74,7 +90,7 @@ export default {
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
