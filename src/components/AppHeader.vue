@@ -50,7 +50,7 @@ export default {
                 <ul class="navbar-nav d-flex w-100 justify-content-center">
                   <li class="nav-item" v-for="menuItem in menuItems">
                     <router-link
-                      :to="{ name: menuItem.routeName.name }"
+                      :to="{ name: menuItem.routeName }"
                       class="nav-link"
                     >
                       {{ menuItem.label }}
